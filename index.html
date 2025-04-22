@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail-Sending</title>
+</head>
+<style>
+
+    *{
+        margin:0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    #container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(103, 171, 216);
+    }
+    #main{
+        width: 50%;
+     margin-bottom: 40px;
+     height: 100vh;
+        margin-top: 50px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    h2{
+        margin: 10px;
+        color: rgb(34, 34, 231);
+        font-size: 25px;
+        text-align: center;
+    }
+    input,textarea{
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        outline: none;
+        border: 1px solid rgb(231, 211, 211);
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px white;
+    }
+    input{
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    textarea{
+        padding-left: 20px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    button{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        height: 30px;
+        background-color: orangered;
+        color: white;
+        outline: none;
+        border:0px;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <div id="container">
+        
+            <form onsubmit="senddata(); reset(); return false;" id="main" >
+
+                <h2>Get in Touch Submit Form</h2>
+                <input type="text" placeholder="Enter your name" required id="name">
+                <input type="number" placeholder="Enter your phone number" id="send" id="number">
+                <input type="email" placeholder="Enter your email id" id="send">
+                <input type="email" placeholder="Enter whome to send mail" id="sendmail">
+                <textarea placeholder="Enter text here......!" rows="7" cols="30"  id="text"></textarea>
+                <button>Submit</button>
+            </form>
+
+
+       
+
+
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function senddata()
+        {
+            Email.send({
+    Host : "s1.maildns.net",
+    Username : "username",
+    Password : "password",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+
+        }
+    </script>
+</body>
+</html>
