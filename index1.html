@@ -1,0 +1,312 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    #container{
+        display: flex;
+        justify-content: center;
+    }
+
+    #main{
+        
+    }
+    form{
+
+        background-color: rgb(214, 218, 221);
+        border-radius: 5px;
+        padding-top: 10px;
+        padding-left: 40px;
+        /* padding-right: 20px;
+       */
+      
+    }
+    h1{
+        color: blueviolet;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 50px;
+    }
+    #name{
+       
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #email{
+       
+      
+       margin-bottom: 10px;
+   }
+   #username{
+       
+       
+       margin-bottom: 10px;
+   }
+   #password{
+       
+       
+       margin-bottom: 10px;
+   }
+   #conform-password{
+       
+     
+       margin-bottom: 10px;
+   }
+   label{
+   padding-top: 20px;
+   font-size: 20px;
+   }
+   input[type='text']{
+    height: 40px;
+    padding: 20px;
+   }
+   input[type='email']{
+    height: 40px;
+    padding: 20px;
+   }
+   input[type='password']{
+    height: 40px;
+    padding: 20px;
+
+   }
+   input[type='number']{
+    height: 40px;
+    padding: 20px;
+   
+    
+    
+   }
+   #name-box:hover{
+    border: 2px solid blue;
+    outline: none;
+    
+   }
+   #email-box:hover{
+    border: 2px solid blue;
+    outline: none;
+    
+   }
+   #username-box:hover{
+    border: 2px solid blue;
+    outline: none;
+    
+   }
+   #password-box:hover{
+    border: 2px solid blue;
+    outline: none;
+    
+   }
+   #conform-password-box:hover{
+    border: 2px solid blue;
+    outline: none;
+    
+   }
+   #number-box:hover{
+    border: 2px solid blue;
+    outline: none;
+    
+   }
+   input[type='submit']{
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    outline: none;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    margin-top: 20px;
+    
+   }
+   input[type='reset']{
+    width: 70px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(90, 86, 86);
+    color: white;
+    outline: none;
+    margin-bottom: 20px;
+
+   }
+   #nameSpan{
+    color: red
+   }
+   #mailSpan{
+    color: red
+   }
+   #userSpan{
+    color: red;
+   }
+   #passwordSpan{
+    color: red;
+   }
+   #conformSpan{
+    color: red;
+   }
+   #numberSpan{
+    color: red;
+    margin-bottom: 20px;
+   }
+
+</style>
+<body>
+    <div id="container">
+
+
+        <div id="main">
+            <h1>Sign Up Page</h1>
+            <form  action="www.google.com" onsubmit="return getdata()"  target="_blank">
+                <div id="name">
+                    <label>Name</label><br>
+                    <input type="text" id="name-box" name="name"  autocomplete="off"><br>
+                    <span id="nameSpan"></span>
+                </div>
+                <div id="email">
+                    <label>Email</label><br>
+                    <input type="text" id="email-box"><br>
+                    <span id="mailSpan"></span>
+                </div>
+    
+                <div id="username">
+                    <label>Userame</label><br>
+                    <input type="text" id="username-box"><br>
+                    <span id="userSpan"></span>
+                </div>
+    
+                <div id="password">
+                    <label>Password</label><br>
+                    <input type="password" id="password-box"><br>
+                    <span id="passwordSpan"></span>
+                </div>
+    
+                <div id="conform-password">
+                    <label>Confirm Password</label><br>
+                    <input type="password" id="conform-password-box"><br>
+                    <span id="conformSpan"></span>
+                </div>
+    
+                <div id="mobile-number">
+                    <label>Mobile Number</label><br>
+                    <input type="number" id="number-box"><br>
+                    <span id="numberSpan"></span>
+                </div>
+               <input type="submit" value="submit">
+                <input type="reset">
+            </form>
+    
+        </div>
+
+
+
+
+    </div>
+   
+   <script>
+       // let btn=document.getElementById('btn');
+       //btn.onclick=getdata;
+       
+       function getdata()
+       {
+           let name=document.getElementById('name-box');
+          
+           let nameSpan=document.getElementById('nameSpan');
+           let email=document.getElementById('email-box').value;
+           
+           if(name.value == "")
+           {
+               nameSpan.innerHTML="*Name Required";
+            // console.log(nameSpan)
+            return false;
+           }
+
+
+           if(email == "")
+           {
+
+            let mailSpan=document.getElementById('mailSpan');
+            mailSpan.innerHTML='*Gmail Required';
+            return false;
+           }
+
+           //let find=document.getElementById('email-box').value;
+           
+           if(email.indexOf('@') <= 0)
+           {
+
+            let mailSpan=document.getElementById('mailSpan');
+            mailSpan.innerHTML='*Gmail Contains @ Symbol';
+            return false;
+           }
+
+           let Username=document.getElementById('username-box').value;
+           if(Username=='')
+           {
+            let userspan=document.getElementById('userSpan');
+            userspan.innerHTML='*User Name Required';
+            return false;
+           }
+        //    let x=Username.startsWith('A'||'B'||'C'||'D'||'E'||'F'||'G'||'H'||'I'||'J'||'K'||'L'||'M'||'N'||'O'||'P'||'Q'||'R'||'S'||'T'||'U'||'V'||'W'||'X'||'Y'||'Z');
+        //    if(x==false)
+        //    {
+        //     let userspan=document.getElementById('userSpan');
+        //     userspan.innerHTML='*User Name Starts With Capital Letter';
+        //     return false;
+        //    }
+
+           let password=document.getElementById('password-box').value;
+
+           if(password=="")
+           {
+            let passwordSpan=document.getElementById('passwordSpan');
+            passwordSpan.innerHTML='*Password Required';
+            return false;
+           }
+           let conformPassword=document.getElementById('conform-password-box').value;
+           if(conformPassword=="")
+           {
+                let conformSpan=document.getElementById('conformSpan');
+                conformSpan.innerHTML='*Password Required';
+                return false;
+           }
+
+           if(conformPassword==password)
+           {
+            let conformSpan=document.getElementById('conformSpan');
+            conformSpan.innerHTML='*Matched';
+            return false;
+           }
+
+
+           if(conformPassword!=password){
+
+            let conformSpan=document.getElementById('conformSpan');
+            conformSpan.innerHTML='*Password Should not Matched';
+            return false;
+
+           }
+
+           let numberBox=document.getElementById('number-box').value;
+           if(isNaN(numberBox))
+           {
+                let numberSpan=document.getElementById('numberSpan');
+                numberSpan.innerHTML='*Mobile Number Required'
+                return fasle;
+           }
+
+           return true;
+
+
+        }
+  
+   </script> 
+   
+</body>
+</html> -->

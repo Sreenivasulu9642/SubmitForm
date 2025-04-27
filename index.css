@@ -1,0 +1,176 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#main{
+
+    display: flex;
+    justify-content: center;
+    background-color: rgb(182, 209, 209);
+    width: 100%;
+  
+
+}
+form{
+    margin-top: 40px;
+}
+#f-name{
+    margin-bottom: 10px;
+}
+.name{
+    font-size: 20px;
+    padding-left: 5px;
+   
+   
+   
+}
+input[type='text']{
+    height: 40px;
+    width: 400px;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    outline: none;
+    border: 0px;
+    margin-bottom: 5px;
+  
+}
+input[type='text']:hover{
+    border: 2px solid blue;
+    outline: none;
+    box-shadow: 0px 0px 10px 0px;
+}
+input[type='submit']{
+    width: 20%;
+    margin-left: 5px;
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    border: 0px;
+    background-color: orangered;
+    color: white;
+   
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    color:rgb(14, 43, 204);
+    font-size: 40px;
+    
+}
+h1 #page{
+    color: rgb(13, 223, 23);
+}
+h1 span{
+    color: rgb(236, 73, 23);
+}
+input[type='reset']{
+    width: 20%;
+    margin-left: 10px;
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    border: 0px;
+    background-color: rgb(40, 201, 201);
+    color: white;
+    margin-bottom: 20px;
+   
+}
+#nameSpan{
+    color: red;
+
+}
+.email{
+    font-size: 20px;
+    padding-left: 5px;
+}
+#email{
+
+    padding: 20px;
+    font-size: 20px;
+}
+#emailSpan{
+    color: red;
+
+}
+#f-email{
+    margin-bottom: 10px;
+}
+
+
+.username{
+    font-size: 20px;
+    padding-left: 5px;
+}
+#username{
+
+    padding: 20px;
+    font-size: 20px;
+}
+#userSpan{
+
+    color: red;
+
+}
+input[type='password']{
+    height: 40px;
+    width: 400px;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    outline: none;
+    border: 0px;
+    margin-bottom: 5px;
+  
+}
+input[type='password']:hover{
+    border: 2px solid blue;
+    outline: none;
+    box-shadow: 0px 0px 10px 0px;
+}
+#f-password{
+    margin-top: 10px;
+}
+.password{
+    font-size: 20px;
+    padding-left: 5px;
+}
+#passwordSpan{
+    color: red;
+}
+#c-passwordSpan{
+    color: red;
+}
+input[type='number']{
+    height: 40px;
+    width: 400px;
+    margin-top: 5px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    outline: none;
+    border: 0px;
+    margin-bottom: 5px;
+  
+}
+input[type='number']:hover{
+    border: 2px solid blue;
+    outline: none;
+    box-shadow: 0px 0px 10px 0px;
+}
+#f-number{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.number{
+    font-size: 20px;
+    padding-left: 5px;
+}
+#numberSpan{
+    color: red;
+}
